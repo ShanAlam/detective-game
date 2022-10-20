@@ -22,8 +22,38 @@ ____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
 *******************************************************************************
 ''')
 
+# Headers 
 print("\n")
 print("Welcome to the Detective Game \n")
 print("Your mission is to find the stolen treasure \n") 
+
+# Using .lower() to convert answer into all lowercase
+move_1 = input("You walk into the suspects home, where would you like to go? living room or garden? \n").lower()
+
+# First move
+if move_1 == "living room":
+  move_2 = input("You walk into the living room, would you like to explore the living room further or move onto the kitchen? living room or kitchen? \n").lower()
+
+  # Second move
+  if move_2 == "living room":
+    move_3 = input("What would you like to explore in the living room?, inside cupboard, under sofa or behind tv? \n").lower()
+
+    # Third move
+    if move_3 == "inside cupboard":
+      print("YOU FOUND THE STOLEN TRASURE!, well done detective :)")
+    elif move_3 == "under sofa":
+      print("The sofa fell on you and you got squashed, GAME OVER :(")
+    elif move_3 == "behind tv":
+      print("You got electrocuted, GAME OVER :(")
+    else:
+      print("GAME OVER:(")
+
+      
+  else:
+    print("The suspects kitchen floor was slippery, you fell and hurt yourself, GAME OVER :(")
+
+  
+else:
+  print("You walked into a boobie trap, GAME OVER :(")
 
 
